@@ -1,6 +1,6 @@
-## SQUIRE: A Sequence-to-sequence Framework for Multi-hop Knowledge Graph Reasoning
+## S_cts
 
-This is the official codebase of the **SQUIRE** <img src="figs/squire.gif" alt="drawing" width="40"/>framework for multi-hop reasoning, proposed in [SQUIRE: A Sequence-to-sequence Framework for Multi-hop Knowledge Graph Reasoning](https://arxiv.org/abs/2201.06206).
+This is the improved codebase of the **SQUIRE** <img src="figs/squire.gif" alt="drawing" width="40"/>framework for multi-hop reasoning, proposed in [SQUIRE: A Sequence-to-sequence Framework for Multi-hop Knowledge Graph Reasoning](https://arxiv.org/abs/2201.06206).
 
 ## Overview
 We present **SQUIRE**, the first **S**e**q**uence-to-sequence based m**u**lt**i**-hop **re**asoning framework, which utilizes an encoder-decoder structure to translate the triple query to a multi-hop path. Here is an overview of our model architecture:
@@ -28,7 +28,7 @@ Then, our model utilizes [AnyBURL](https://web.informatik.uni-mannheim.de/AnyBUR
 python utils.py --dataset FB15K237 --gen-train-data --num 6 --out 6_rev_rule --max-len 3 --rule
 ```
 Note that we are currently using BFS to search for query-path pairs in training set, which might take up to an hour on our experiment datasets. We are planning to optimize our code for speed-up.
-ThenThen the positive sample pairs of each sample are obtained based on the rules and paths.
+Then the positive sample pairs of each sample are obtained based on the rules and paths.
 
 ```
 python utils.py --dataset FB15K237 --contrast --rule
