@@ -28,6 +28,11 @@ Then, our model utilizes [AnyBURL](https://web.informatik.uni-mannheim.de/AnyBUR
 python utils.py --dataset FB15K237 --gen-train-data --num 6 --out 6_rev_rule --max-len 3 --rule
 ```
 Note that we are currently using BFS to search for query-path pairs in training set, which might take up to an hour on our experiment datasets. We are planning to optimize our code for speed-up.
+ThenThen the positive sample pairs of each sample are obtained based on the rules and paths.
+
+```
+python utils.py --dataset FB15K237 --contrast --rule
+```
 
 #### Training and Evaluation
 The following commands train and evaluate (on link prediction) SQUIRE model on all four datasets with GPU 0, where `--iter` is added to apply *iterative training* strategy during training. Check argparse configuration at `train.py` for details about each argument.

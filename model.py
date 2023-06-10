@@ -170,7 +170,7 @@ class TransformerModel(nn.Module):
         cts_output = self.logits(aug_source, aug_outputs,cts=True)
         out = self.extract_target(output,lengths)
         cts_out = self.extract_target(cts_output,aug_lengths)
-        cts_nce_logits, cts_nce_labels = self.cts_loss(out, cts_out, temp=1.0, batch_size=logits.shape[0])
+        cts_nce_logits, cts_nce_labels = self.cts_loss(out, cts_out, temp=0.01, batch_size=logits.shape[0])
         nce_loss = self.loss_fct(cts_nce_logits, cts_nce_labels)
 
         loss += self.lambda_cts * nce_loss
@@ -196,8 +196,8 @@ class TransformerModel(nn.Module):
 
         z = torch.cat((z_i, z_j), dim=0)  # 2B * D
 
-        sim = torch.mm(z, z.T) / temp  # 2B * 2B
-        #sim = self.sim(z,z,temp)
+        #sim = torch.mm(z, z.T) / temp  # 2B * 2B
+        sim = self.sim(z,z,temp)
 
         sim_i_j = torch.diag(sim, batch_size)  # B*1
         sim_j_i = torch.diag(sim, -batch_size)  # B*1
