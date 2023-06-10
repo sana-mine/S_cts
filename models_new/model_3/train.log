@@ -1,0 +1,13 @@
+2023-05-29 11:00:30,640 - train.py[line:277] - INFO: Namespace(batch_size=1024, beam_size=256, ckpt='ckpt_30.pt', dataset='data/FB15K237-20', dropout=0.1, embedding_dim=256, encoder=True, hidden_size=512, iter=True, iter_batch_size=128, l_punish=True, label_smooth=0.25, loop=False, lr=0.0001, max_len=3, no_filter_gen=True, num_epoch=40, num_layers=6, output_path=False, prob=0.25, save_dir='model_3', save_interval=10, self_consistency=False, smart_filter=False, test=False, test_batch_size=4, trainset='6_rev_rule', warmup=3, weight_decay=0)
+2023-05-29 11:00:40,796 - train.py[line:309] - INFO: [Iter0: 21] [Iter1: 10] [Iter2: 9]
+2023-05-29 11:03:45,624 - train.py[line:347] - INFO: [Epoch 1/40] [train loss: 9.468129]
+2023-05-29 11:06:47,960 - train.py[line:347] - INFO: [Epoch 2/40] [train loss: 9.108260]
+2023-05-29 11:09:49,337 - train.py[line:347] - INFO: [Epoch 3/40] [train loss: 9.002019]
+2023-05-29 11:12:54,246 - train.py[line:347] - INFO: [Epoch 4/40] [train loss: 8.922874]
+2023-05-29 11:15:55,518 - train.py[line:347] - INFO: [Epoch 5/40] [train loss: 8.737123]
+2023-05-29 11:18:59,368 - train.py[line:347] - INFO: [Epoch 6/40] [train loss: 8.577686]
+2023-05-29 11:22:00,334 - train.py[line:347] - INFO: [Epoch 7/40] [train loss: 8.510201]
+2023-05-29 11:25:05,215 - train.py[line:347] - INFO: [Epoch 8/40] [train loss: 8.468541]
+2023-05-29 11:28:05,162 - train.py[line:347] - INFO: [Epoch 9/40] [train loss: 8.440887]
+2023-05-29 11:31:09,612 - train.py[line:347] - INFO: [Epoch 10/40] [train loss: 8.420540]
+2023-05-29 11:34:14,292 - train.py[line:347] - INFO: [Epoch 11/40] [train loss: 8.404625]
