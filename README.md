@@ -1,16 +1,9 @@
 ## S_cts
 
-This is the improved codebase of the **SQUIRE** <img src="figs/squire.gif" alt="drawing" width="40"/>framework for multi-hop reasoning, proposed in [SQUIRE: A Sequence-to-sequence Framework for Multi-hop Knowledge Graph Reasoning](https://arxiv.org/abs/2201.06206).
+This is the improved codebase.This is the PyTorch implementation.
 
-## Overview
-We present **SQUIRE**, the first **S**e**q**uence-to-sequence based m**u**lt**i**-hop **re**asoning framework, which utilizes an encoder-decoder structure to translate the triple query to a multi-hop path. Here is an overview of our model architecture:
-
-![](figs/model.png)
-
-This is the PyTorch implementation of our proposed model.
-
-## Training SQUIRE
-To reproduce our results or extend SQUIRE model to more datasets, follow these steps.
+## Training 
+To reproduce our results or extend  model to more datasets, follow these steps.
 
 #### Generate training set
 First generate mapping files and query-path pairs as training set with `utils.py` under `data/` folder, run the following command:
@@ -75,15 +68,4 @@ To evaluate a trained model (for example, on FB15K237), run the following comman
 CUDA_VISIBLE_DEVICES=0 python train.py --test --dataset FB15K237 --beam-size 256 --save-dir "model_1" --ckpt "ckpt_30.pt" --test-batch-size 8 --encoder --l-punish --no-filter-gen
 ```
 
-## Citation
 
-Please cite our paper if you use our method in your work (Bibtex below).
-
-```bibtex
-@inproceedings{bai2022squire,
-   title={SQUIRE: A Sequence-to-sequence Framework for Multi-hop Knowledge Graph Reasoning},
-   author={Bai, Yushi and Lv, Xin and Li, Juanzi and Hou, Lei and Qu, Yincen and Dai, Zelin and Xiong, Feiyu},
-   booktitle={EMNLP},
-   year={2022}
-}
-```
